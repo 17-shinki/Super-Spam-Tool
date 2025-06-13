@@ -1,7 +1,11 @@
 # Hướng dẫn sử dụng script `spamb3.js`
 
 ## Mục đích
-Script này tự động gửi các tin nhắn `"bfish"`, `"bpray"`, `"blove"` vào một kênh Discord theo chu kỳ định sẵn.
+Script này tự động gửi các tin nhắn `"bfish"`, `"bpray"`, `"blove"` vào một kênh Discord theo chu kỳ định sẵn:  
+- `"bfish"` mỗi 3 phút  
+- `"blove"` mỗi 7 phút  
+- `"bpray"` mỗi 7 phút  
+Các tin nhắn này sẽ được gửi song song, không chờ nhau.
 
 > **Cảnh báo:** Việc spam tin nhắn có thể vi phạm Điều khoản sử dụng của Discord. Hãy sử dụng với trách nhiệm của bạn!
 
@@ -18,7 +22,7 @@ Thay thế `YOUR_CHANNEL_ID_HERE` bằng ID của kênh mà bạn muốn gửi t
 
 Hoặc, sau khi nạp script vào Console, bạn có thể cập nhật CHANNEL_ID bằng lệnh:
 ```js
-SpambyNyx.setChannelId("ID_KENH_DISCORD");
+SpamB3.setChannelId("ID_KENH_DISCORD");
 ```
 
 ---
@@ -42,19 +46,19 @@ SpambyNyx.setChannelId("ID_KENH_DISCORD");
 - Dán toàn bộ nội dung file `spamb3.js` vào Console.
 - Để bắt đầu spam, nhập:
   ```js
-  SpambyNyx.setChannelId("123456789012345678"); // Thay bằng ID kênh của bạn
-  SpambyNyx.start();
+  SpamB3.setChannelId("123456789012345678"); // Thay bằng ID kênh của bạn
+  SpamB3.start();
   ```
 - Để dừng spam, nhập:
   ```js
-  SpambyNyx.stop();
+  SpamB3.stop();
   ```
 
 ---
 
 ## Lưu ý
 - Đảm bảo rằng bạn đã cài đặt đầy đủ các phụ thuộc cần thiết trước khi chạy script.
-- Đảm bảo bot của bạn có quyền gửi tin nhắn trong kênh mục tiêu.
+- Đảm bảo bạn có quyền gửi tin nhắn trong kênh mục tiêu.
 - Kiểm tra kỹ ID kênh và các cấu hình khác trước khi chạy script để tránh gửi tin nhắn đến nhầm kênh.
 - Sử dụng script này với trách nhiệm và tuân thủ các quy định của Discord.
 
@@ -62,15 +66,15 @@ SpambyNyx.setChannelId("ID_KENH_DISCORD");
 
 ## Các hàm hỗ trợ
 
-- `SpambyNyx.start()` — Bắt đầu spam tin nhắn.
-- `SpambyNyx.stop()` — Dừng spam tin nhắn.
-- `SpambyNyx.setChannelId("ID")` — Đổi kênh gửi tin nhắn.
+- `SpamB3.start()` — Bắt đầu spam tin nhắn.
+- `SpamB3.stop()` — Dừng spam tin nhắn.
+- `SpamB3.setChannelId("ID")` — Đổi kênh gửi tin nhắn.
 
 ---
 
 ## Phiên bản
 - **Phiên bản hiện tại:** 1.0.0
-- **Ngày phát hành:** 01/01/2023
+- **Ngày phát hành:** 14/06/2025
 
 ---
 

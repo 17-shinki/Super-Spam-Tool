@@ -15,7 +15,7 @@ const SpamTag = (() => {
     // === Cấu hình ===
     const CONFIG = {
         CHANNEL_ID: "YOUR_CHANNEL_ID_HERE", // <-- Thay bằng ID kênh bạn muốn spam
-        TAG_USER_ID: "123456789012345678",  // <-- Thay bằng ID người bạn muốn tag
+        TAG_USER_ID: "1215259229569417278",  // <-- Thay bằng ID người bạn muốn tag
         LOGGER_OPTIONS: {
             USE_TIMESTAMPS: false,
         }

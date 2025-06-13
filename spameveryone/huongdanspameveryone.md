@@ -72,4 +72,4 @@ SpamTag.stop();
 
 ---
 
-**Chúc bạn sử dụng an
+**Chúc bạn sử dụng an toàn

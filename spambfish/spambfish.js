@@ -14,7 +14,7 @@ const SpamBfish = (() => {
 
     // === Cấu hình ===
     const CONFIG = {
-        CHANNEL_ID: "YOUR_CHANNEL_ID_HERE", // <-- Thay bằng ID kênh bạn muốn spam
+        CHANNEL_ID: "1375473302536982678", // <-- Thay bằng ID kênh bạn muốn spam
         MESSAGE: "bfish",
         INTERVAL_MS: 3 * 60 * 1000, // 3 phút
         LOGGER_OPTIONS: {

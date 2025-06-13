@@ -9,7 +9,7 @@
  * @dependency Cần có hàm `sendMessage` và ID kênh hợp lệ.
  */
 
-const SpambyNyx = (() => {
+const SpamB3 = (() => {
     'use strict';
 
     // === Cấu hình ===
@@ -103,25 +103,19 @@ const SpambyNyx = (() => {
             return;
         }
         state.isRunning = true;
-        Logger.info("Bắt đầu spam tin nhắn. Để dừng, gọi SpamBfish.stop()");
+        Logger.info("Bắt đầu spam tin nhắn. Để dừng, gọi SpamB3.stop()");
 
         // Spam bfish mỗi 3 phút
         _spamMessageCustom("bfish");
-        state.intervalId = setInterval(() => _spamMessageCustom("bfish"), CONFIG.INTERVAL_MS);
-
-        // Spam bpray mỗi 7 phút
-        state.bprayIntervalId = setTimeout(function bprayLoop() {
-            if (!state.isRunning) return;
-            _spamMessageCustom("bpray");
-            state.bprayIntervalId = setTimeout(bprayLoop, 7 * 60 * 1000);
-        }, 7 * 60 * 1000);
+        state.bfishIntervalId = setInterval(() => _spamMessageCustom("bfish"), 3 * 60 * 1000);
 
         // Spam blove mỗi 7 phút
-        state.bloveIntervalId = setTimeout(function bloveLoop() {
-            if (!state.isRunning) return;
-            _spamMessageCustom("blove");
-            state.bloveIntervalId = setTimeout(bloveLoop, 7 * 60 * 1000);
-        }, 7 * 60 * 1000);
+        _spamMessageCustom("blove");
+        state.bloveIntervalId = setInterval(() => _spamMessageCustom("blove"), 7 * 60 * 1000);
+
+        // Spam bpray mỗi 7 phút
+        _spamMessageCustom("bpray");
+        state.bprayIntervalId = setInterval(() => _spamMessageCustom("bpray"), 7 * 60 * 1000);
     }
 
     // === Dừng spam ===
@@ -130,19 +124,19 @@ const SpambyNyx = (() => {
             Logger.warn("Chưa chạy hoặc đã dừng.");
             return;
         }
-        clearInterval(state.intervalId);
-        clearTimeout(state.bprayIntervalId);
-        clearTimeout(state.bloveIntervalId);
-        state.intervalId = null;
-        state.bprayIntervalId = null;
+        clearInterval(state.bfishIntervalId);
+        clearInterval(state.bloveIntervalId);
+        clearInterval(state.bprayIntervalId);
+        state.bfishIntervalId = null;
         state.bloveIntervalId = null;
+        state.bprayIntervalId = null;
         state.isRunning = false;
         Logger.info(`Đã dừng. Tổng số tin nhắn đã gửi: ${state.sentCount}`);
     }
 
     Logger.info("Script spam bfish đã sẵn sàng.");
     Logger.info("Cấu hình CHANNEL_ID trước khi chạy.");
-    Logger.info("Chạy SpamBfish.start() để bắt đầu, SpamBfish.stop() để dừng.");
+    Logger.info("Chạy SpamB3.start() để bắt đầu, SpamB3.stop() để dừng.");
 
     return {
         start,
